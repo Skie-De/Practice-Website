@@ -1,185 +1,149 @@
 <!DOCTYPE html>
-    <html>
-        <head>
-            <title>Practice Website</title>
+<html>
+    <head>
+        <title>Practice Website</title>
 
-            <style>
-                @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        <style>
+            body {
+                background-color: rgb(255, 247, 200);
+                font-family: 'Roboto';
+            }
+            
+            .hd1 {
+                color: white;
+                background-color: black;
+                padding: 10px;
+                text-align: center;
+                z-index: 1;
+                margin: 5;
+            }
 
-                body {
-                    background-color: rgb(252, 237, 213);
-                    font-family: 'Roboto';
-                }
-                header {
-                    color: white;
-                    background-color: black;
-                    font-size: smaller;
-                    padding: 15px;
-                    top: 0;
-                    right: 0;
-                    left: 0;
-                    text-align: center;
-                    position: fixed;
-                    z-index:1;
-                }
-
-                main {
-                    background-color: rgb(252, 237, 213);
-                    position: fixed;
-                    margin-top: 35px;
-                    padding: 15px;
-                    right: 0;
-                    left: 0;
-                    padding-bottom: 5px;
-                    
-                }
-
-                a {
-                    color: white;
-                    background-color: rgb(237, 152, 41);
-                    text-decoration: none;
-                    overflow: hidden;
-                    padding: 0;
-                    
-                }
-
-                footer {
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    text-align: center;
-                    background-color: black;
-                    color: white;
-                    padding: 10px;
-                    font-size: smaller;
-                    position: fixed;
-                }
-
+            .hd2 {
+                background-color: orange;
+                padding: 17px;
+                text-align: right;
                 
+            }
 
-                button  {
-                    background-color: black;
-                    color: white;
-                    border: none;
-                    border-radius: 25px;
-                    float: right;   
-                    
-                    padding: 12px;
-                    margin: 10px;
-                    padding-left: 20px;
-                    padding-right: 20px;
-                }
+            a {
+                text-decoration: none;
+                color: white;
+                padding: 7px;
+            }
 
-                .header {
-                    float: right;
-                    justify-content: right;
-                    background-color: rgb(237, 152, 41);
-                    z-index: 2; 
-                    display: flex;
-                    width: 100%;
-                    padding: 0;
-                    margin: 0;
-                }
+            .signup-btn {
+                background-color: white;
+                color: orange;
+                border-radius: 20px;
+                border: none;
+                padding: 8px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
 
-                .account-info1 {
-                    background-color: white;
-                    color: rgb(237, 152, 41);
-                    
-                }
+            .login-btn {
+                background-color: black;
+                color: white;
+                border-radius: 20px;
+                border: none;
+                padding: 8px;
+                padding-left: 18px;
+                padding-right: 18px;
+            }
 
-                tab {
-                    padding: 5px;
-                    margin-top: 5px;
-                }
+            footer {
+                background-color: black;
+                color: white;
+                text-align: center;
+                justify-content: end;
+                padding: 15px;
+                justify-content: bottom;
+            }
 
-                ul {
-                    text-decoration: none;
-                    float: right;
-                }
+            #regForm {
+                background-color: white;
+                margin: 90px;
+                margin-left: 300px;
+                margin-right: 300px;
+                z-index: 3;
+                padding: 40px;
+                padding-bottom: 5px;
+                margin-bottom: 50px;
+            }
 
-                .info-collect {
-                    text-align: center;
-                    margin: 150px;
-                    background-color: white;
-                    z-index: 3;
-                    padding: 50px;
-                    float: center;
-                }
+            input {
+                border-color: orange;
+                border-style: solid;
+                width: 100%;
+                justify-content: center;
+                padding: 10px;
+                border-radius: 7px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
 
-                label {
-                    float: left;
-                }
-
-                input {
-                    border-color: rgb(237, 152, 41);
-                    width: 95%;
-                    padding: 12px;
-                    border-radius: 10px;
-                }
-                
+            .submit {
+                width: 105%;
+                background-color: black;
+                color: white;
+                border-radius: 10px;
+                padding: 15px;
+            }
+           
             </style>
-        </head>
-        <body>
-            <header>This is our practice website XD
-                
-            </header>
+    </head>
 
-            <main>
-                <div class="header">
-                    
+    <body>
+            <div class="hd1">
+                <header>This is our practice website XD </header>
+            </div>
 
-                    <tab>
-                    <ul><a href="">Posts</a></ul>
-                    <ul><a href="">Contact Us</a></ul>
-                    <ul><a href="">About Us</a></ul>
-                    <ul><a href="">Home</a></ul>
-                    
-                    
-                    
-                    
-                    </tab>
-                    <button class= "account-info1" href="#">Sign Up</button>
-                    <button class= "account-info" href="#">Log In</button>
-                    
-                    
-                </div>
-                
-                <div class="info-collect">
-                    <form action="action_page.php">
-                        <div class="container">
-                          
-                          <label for="name"><b>Name</b></label> <br>
-                          <input type="text" placeholder="Enter Name" name="name" required> <br>
-                      
-                          <label for="email"><b>Email</b></label> <br>
-                          <input type="password" placeholder="Enter email" name="email" required> <br>
-                      
-                          
-                      
-                          <p style ="float: left; font-weight: bold;">Gender</p>
-                            <input type="radio" id="female" name="gender" value="Male">
-                            <label for="gender"><b>Male</b></label><br>
-                            <input type="radio" id="female" name="gender" value="Female">
-                            <label for="gender"><b>Female</b></label><br> <br> <br>
-                            
-                      
-                          <label for="psw"><b> Password</b></label>
-                          <input type="password" placeholder=" Password" name="psw" required>
-                      
-                          <div class= "conformation">
-                            <button type="submit" class="submitbtn" style=" background-color: black; width: 95%;">Submit</button> <br>
-                            <p><a href="#" style= "background-color:transparent; color: purple; text-decoration: underline; text-align: center;">Forgot Password</a> </p> 
-                            <p>Don't have an account yet? <a href="#" style= "background-color:transparent; color: purple; text-decoration: underline; text-align: center;">Sign Up</a> </p>
-                            
-                        </div>
-                      </form>
-                      
-                </div>
-            
-            
-            </main>
+        <main>
+            <div class="hd2">
+                <a href="">Home</a>
+                <a href="">About Us</a>
+                <a href="">Contact Us</a>
+                <a href="">Posts</a>
 
-            <footer>&#169 2024</footer>
+                <a href="" class="signup-btn">Sign Up</a>
+                <a href="" class="login-btn">Login</a>
+            </div>
+        </main>
+        <form id="regForm" action="https://www.youtube.com/watch?v=CqJIdHsNpc0&ab_channel=squewe">
 
-        </body>
-    </html>
+            <div class="tab">Name
+              <p><input placeholder="Name..." oninput="this.className = ''" name="fname"></p>
+              
+            </div>
+            <div class="tab">Email
+              <p><input placeholder="Email..." oninput="this.className = ''" name="email"></p>
+            </div>
+        
+
+            <div class="tab1"> 
+                <p1>Gender</p1>
+            <input type="radio" id="contactChoice1" name="contact" value="email" />
+            <label for="contactChoice1">Male</label>
+      <input type="radio" id="contactChoice2" name="contact" value="phone" />
+      <label for="contactChoice2">Female</label>
+
+      <div style=" margin-top: 40px;">
+
+            </div>
+
+            <div class="tab">Password
+                <p><input placeholder="Password" oninput="this.className = ''" name="pword" type="password"></p>
+              </div>
+
+              
+              <button type="submit" class="submit">Submit</button>
+              
+            </div>
+          </form>
+          
+        
+
+        <footer>&#0169 2024</footer>
+
+    </body>
+</html>
