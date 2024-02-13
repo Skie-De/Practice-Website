@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+    <!--This is the head tag for the style, title, links, etc. for the website. Basically the backend.-->
+  <head>
+    <!-- Title for the website -->
+    <title>Class Webpage</title>
+    <!--Link to google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <style>
+    /*Google fonts styles - weight and opacity*/
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 400, "opsz" 24;
+      }
+      /*styles for the header 
+      poition, z-index is for the layering on the webpage
+      left, right is for where the text shows up */
+      header {
+        position: fixed;
+        left: 0;
+        right: 0;
+        z-index: 0;
+        display: flex;
+        flex-direction: column;
+      }
+
+/*these are the style rules for my banner. It is stuck to the top of the page and does not scroll with the rest of the elements on the page...*/
+      .banner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        text-align: center;
+        background-color: black;
+        color: white;
+      }
+
+      /*these are the styles for the navigation bar. 
+      This changes the background color, with a z-index to ensure that it stays as the second box on the page.  
+      It also changes the positioning of the text inside the navigation bar*/
+      .navigation-bar {
+        background-color: rgb(255, 128, 0);
+        position: fixed;
+        top: 3.1rem;
+        left: 0;
+        right: 0;
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+      }
+      /*These are the styles  for the text in the navigation bar. the tag with a included, species styles specifically including the link.  */
+
+      .nav-items {
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+        float: right;
+      }
+
+      .nav-items a {
+        padding: 0.5rem;
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        margin-right: 8px;
+      }
+
+        /* styles for the navigtion buttons */
+      .nav-items button {
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-left: 14px;
+        padding-right: 14px;
+        margin-right: 8px;
+        border: none;
+        border-radius: 28px;
+      }
+      /*Positioning/styles for the "main" area of the body of the webpage. This shows up in the middle of the body. */
+      main {
+        position: relative;
+        top: 5.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5rem;
+        z-index: 0;
+      }
+
+      /* styles for the body tag, which only applies to those that dont hav ea style rule that changes any of theese properties */
+      body {
+        background-color: rgba(241, 179, 64, 0.118);
+        font-family: "Roboto", sans-serif;
+      }
+
+      /* this is the login section for the body tags. These styles are for the box around the input for the login.  */
+      .login-section {
+        background-color: white;
+        border-radius: 10px;
+        padding: 2rem;
+        z-index: 0;
+      }
+
+      /*These style are used for any input for the form, wherever the type is text, and the user has to type in a response, these styles would be associated. */
+      input[type="text"],
+      select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid rgb(255, 128, 0);
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      /*These styles are used for the form, when a user types in a password, these styles will be applied to the text box. */
+      input[type="password"],
+      select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid rgb(255, 128, 0);
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      /*When the input type is radio, these are the styles that will be applied to the form input box.*/
+      input[type="radio"] {
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: 1px solid rgb(255, 128, 0);
+        border-radius: 4px;
+        margin-left: 8px;
+      }
+
+      /* This changes the  stylle of the choice options for the gender part of the form, as well as the positioning */
+      .gender-select {
+        width: 100%;
+        display: block;
+        margin-left: 0px;
+        margin-top: 8px;
+        margin-bottom: 12px;
+      }
+
+      .gender-label {
+        margin-left: 8px;
+        font-weight: 400;
+      }
+
+      label {
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      /* the footer is at the bottom of the webpage, theses styles ensure that the poisition is fized at the bottom, as well as changing the css of the enitrety of the footer. */
+
+      .form-footer {
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+        margin-top: 8px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      footer {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        color: white;
+        font-size: 12px;
+        font-weight: 400;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!--below is the banner for my website...-->
+      <div class="banner">
+        <p>This is our practice website XD</p>
+      </div>
+      <!--This is the navigation bar, located at the top of the webpage just below the banner-->
+      <div class="navigation-bar">
+        <!--This is the logo-->
+        <div class="logo">
+          <span class="material-symbols-outlined"> heart_minus </span>
+          <span style="font-weight: 700">Practice Hub </span>
+        </div>
+        <!--This creates the tabs in the nav-bar-->
+        <div class="nav-items">
+          <a href="">Home</a>
+          <a href="">About Us</a>
+          <a href="">Contact Us</a>
+          <a href="">Posts</a>
+          <!--this is the buttons in the nav-bar, one is sing-up, one is log-in, this uses in-line css-->
+          <button style="color: orange; cursor: pointer">Sign Up</button>
+          <button
+            style="
+              color: white;
+              background-color: black;
+              cursor: pointer;
+              margin-left: 8px;
+            "
+          >
+            Log In
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+        <!--Now into the main tag, this create the form on our webpage,
+        each section includes input depending on what we want to acheive from the users.-->
+      <div class="login-section">
+        <form>
+          <label for="name"> Name </label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="e.g. John Doe"
+          />
+
+          <label for="email">
+            Email
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="e.g. johndoe23@hotmail.com"
+            />
+          </label>
+
+          <div class="gender-select">
+            <label> Gender </label>
+
+            <input id="gender" name="gender" value="Male" type="radio" />
+            <label for="gender" class="gender-label">Male</label>
+
+            <input id="gender" name="gender" value="Female" type="radio" />
+            <label for="gender" class="gender-label">Female</label>
+          </div>
+          <label for="password"> Password </label>
+          <input id="password" name="password" type="password" />
+
+          <!--These are the styles for the submit button-->
+          <button
+            style="
+              width: 100%;
+              color: white;
+              background-color: black;
+              cursor: pointer;
+              padding: 15px 20px;
+              border-radius: 5px;
+              border: none;
+              margin-top: 10px;
+              font-weight: bold;
+            "
+            type="submit"
+          >
+            Submit
+          </button>
+        </form>
+        <!--This is the footer for the form, which include the last section of the form that gives th euser the option to change thier password.-->
+        <div class="form-footer">
+          <a href="">Forgot Password?</a>
+          <p>Don't have an account yet? <a href="">Sign up</a></p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div>
+        <!--Copyrights-->
+        <p>&copy 2024</p>
+      </div>
+    </footer>
+  </body>
+</html>
